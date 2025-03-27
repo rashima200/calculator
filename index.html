@@ -9,39 +9,38 @@
 <body>
    <div class="container">
        <div class="calculator">
-           <form>
+           <form name="calc">
                <div class="display">
-                   <input type="text" name="display" readonly>
+                   <input type="text" id="display" name="display" readonly>
                </div>
                <div>
-                <input type="button" value="AC" onclick="document.getElementById('display').value = ''" class="operator">
-                <input type="button" value="DE" onclick="document.getElementById('display').value = document.getElementById('display').value.slice(0, -1)" class="operator">
-                <input type="button" value="." onclick="document.getElementById('display').value += '.'" class="operator">
-                <input type="button" value="/" onclick="document.getElementById('display').value += '/'" class="operator">
-            </div>
-            
-               <div>
-                   <input type="button" value="7" onclick="display.value += '7' ">
-                   <input type="button" value="8" onclick="display.value += '8' ">
-                   <input type="button" value="9" onclick="display.value += '9' ">
-                   <input type="button" value="*" onclick="display.value += '*'" class="operator">
+                   <input type="button" value="AC" onclick="document.calc.display.value = ''" class="operator">
+                   <input type="button" value="DE" onclick="document.calc.display.value = document.calc.display.value.slice(0, -1)" class="operator">
+                   <input type="button" value="." onclick="document.calc.display.value += '.'" class="operator">
+                   <input type="button" value="/" onclick="document.calc.display.value += '/'" class="operator">
                </div>
                <div>
-                   <input type="button" value="4" onclick="display.value += '4' ">
-                   <input type="button" value="5" onclick="display.value += '5' ">
-                   <input type="button" value="6" onclick="display.value += '6' ">
-                   <input type="button" value="-" onclick="display.value += '-'" class="operator">
+                   <input type="button" value="7" onclick="document.calc.display.value += '7'">
+                   <input type="button" value="8" onclick="document.calc.display.value += '8'">
+                   <input type="button" value="9" onclick="document.calc.display.value += '9'">
+                   <input type="button" value="*" onclick="document.calc.display.value += '*'" class="operator">
                </div>
                <div>
-                   <input type="button" value="1" onclick="display.value += '1' ">
-                   <input type="button" value="2" onclick="display.value += '2' ">
-                   <input type="button" value="3" onclick="display.value += '3' ">
-                   <input type="button" value="+" onclick="display.value += '+'"class="operator">
+                   <input type="button" value="4" onclick="document.calc.display.value += '4'">
+                   <input type="button" value="5" onclick="document.calc.display.value += '5'">
+                   <input type="button" value="6" onclick="document.calc.display.value += '6'">
+                   <input type="button" value="-" onclick="document.calc.display.value += '-'" class="operator">
                </div>
                <div>
-                   <input type="button" value="00" onclick="display.value += '00' ">
-                   <input type="button" value="0" onclick="display.value += '0' ">
-                   <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+                   <input type="button" value="1" onclick="document.calc.display.value += '1'">
+                   <input type="button" value="2" onclick="document.calc.display.value += '2'">
+                   <input type="button" value="3" onclick="document.calc.display.value += '3'">
+                   <input type="button" value="+" onclick="document.calc.display.value += '+'" class="operator">
+               </div>
+               <div>
+                   <input type="button" value="00" onclick="document.calc.display.value += '00'">
+                   <input type="button" value="0" onclick="document.calc.display.value += '0'">
+                   <input type="button" value="=" onclick="document.calc.display.value = eval(document.calc.display.value)" class="equal operator">
                </div>
            </form>
        </div>
